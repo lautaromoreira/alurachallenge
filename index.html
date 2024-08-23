@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Encriptador</title>
+</head>
+<body>
+    <header class="header">
+    </header>
+    <main>
+        <div class="challenge">
+            <!-- Logo de cabecera, se puso dentro de una section en body para que se viera igual que en diseño figma-->
+            <section class="challenge__header">
+                <img class="challenge__header__logoalura" src="./imagenes/Logo.png" alt="Logo Alura"> 
+            </section>
+            <!-- Seccion izquierda texto sin encriptar -->
+            <section class="challenge__original">
+                <!-- Titulo de la aplicacion -->
+                <h1 class="challenge__original__titulo">ENCRIPTADOR DE TEXTO</h1>
+                <!-- Texto a encriptar -->
+                <textarea class="challenge__original__textosuperior" cols="30" rows="10" placeholder="Ingrese el texto aqui"></textarea>
+                <!-- Instrucciones -->
+                <div class="challenge__original__instrucciones">
+                    <!-- imagen exclamacion -->
+                    <!-- <img src="/imagenes/exclamation-circle.png" alt="Icono de advertencia" class="challenge__original__instrucciones__exclamacion"> -->
+                     <p class="challenge__original__instrucciones__exclamacion">!</p>
+                    <!-- Texto instrucciones -->
+                    <p class="challenge__original__instrucciones__textoinfo">Solo letras minúsculas y sin acentos</p>
+                </div>
+                <!-- Seccion de Botones -->
+                <div class="challenge__original__botonesaccion">
+                    <!-- boton de encriptar -->
+                    <button class="challenge__original__botonesaccion__botonencriptar" onclick="btnencriptar()">Encriptar</button>
+                    <!-- boton de desencriptar -->
+                    <button class="challenge__original__botonesaccion__botondesencriptar" onclick="btndesencriptar()">Desencriptar</button>
+                </div>
+            </section>
+            <!-- Seccion derecha texto encriptado e imagen -->
+            <section class="challenge__encriptado">
+                <div class="challenge__encriptado__box">
+                    <div class="challenge_encriptado__box__seccion1" id="seccion1">
+                            <img src="/imagenes/Muneco.png" alt="Imagen con lupa" class="challenge__encriptado__box__seccion1__imagen">
+                            <h2 class="challenge__encriptado__box__seccion1__texto1">Ningun mensaje fue encontrado</h2>
+                            <p class="challenge__encriptado__box__seccion1__texto2">Ingrese Texto que desees encriptar o desencriptar</p>
+                    </div> 
+                    <div class="challenge__encriptado__box__seccion2" id="seccion2">
+                        <!-- Texto Encriptado -->
+                        <textarea class="challenge__encriptado__box__seccion2__textoencriptado" cols="20" rows="10"  >sin texto</textarea>
+                        <!-- boton de copiar -->
+                        <button class="challenge__encriptado__box__seccion2__botoncopiar" onclick="btncopiar()" >Copiar</button>
+                    </div>
+               </div>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <h2 class="footer__text">Desarrollado por Lautaro Moreira para Challenge 1 de Oracle One-Alura G7</h2>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>
