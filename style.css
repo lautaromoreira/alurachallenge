@@ -249,3 +249,63 @@ footer{
   font-weight: 400;
   font-family: var(--fuente-inter);
 }
+
+@media (max-width: 768px) {
+
+  .challenge {
+    flex-direction: column;
+    width: 100%;
+  }
+  .challenge__original{
+    width:100%;
+  }
+  .challenge__encriptado{
+    width:100%;
+  }
+
+  .challenge__encriptado__box__seccion1__imagen{
+    display: none;
+  }
+  
+}
+
+@media (max-width: 375px) {
+
+  .challenge {
+    flex-direction: column;
+    width: 100%;
+  }
+  .challenge__original{
+    width:100%;
+    flex-direction: column;
+  }
+  .challenge__encriptado{
+    width:100%;
+    flex-direction: column;
+  }
+
+  .challenge__encriptado__box__seccion1__imagen{
+    display: none;
+  }
+
+  .challenge__original__botonesaccion{
+    flex-direction: column;
+    height: 9rem;
+  
+  }
+ 
+  .challenge__original__botonesaccion__botonencriptar{
+    width: 100%;
+    height: 3.5rem;
+    margin-bottom: 1rem;
+  }
+  .challenge__original__botonesaccion__botondesencriptar{
+    width: 100%;
+    height: 3.5rem;
+    margin-bottom: 1rem;
+  }
+    
+
+
+
+}
