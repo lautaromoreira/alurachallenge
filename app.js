@@ -19,6 +19,14 @@ function encripta(textoAbierto){
 }
 function btnencriptar(){
     const textoEncriptado = encripta(mensajeOriginal.value);
+
+    if(validarTexto(mensajeOriginal.value) === 1 ){
+        alert("Texto contiene caracteres invalidos") ;
+        return ;
+    } else {
+
+    }
+
     if(mensajeOriginal.value.length >= 1){
        mensajeEncriptado.value = textoEncriptado ;
        seccion1.style.display ='none';
@@ -43,6 +51,14 @@ return textoEncriptado
 
 function btndesencriptar(){
     const textoLibre = desencripta(mensajeOriginal.value);
+
+    if(validarTexto(mensajeOriginal.value) === 1 ){
+        alert("Texto contiene caracteres invalidos") ;
+        return ;
+    } else {
+
+    }
+
     if(mensajeOriginal.value.length >= 1 ) {
        mensajeEncriptado.value = textoLibre;
        seccion1.style.display ='none';
@@ -64,3 +80,14 @@ function btncopiar(){
     mensajeEncriptado.value = '';
 }
 
+
+function validarTexto(texto){
+    var letrasvalidas = "abcdefghijklmnñopqrstuvwxyz 1234567890,;:{}[]+-";
+
+   for(let i=0; i<texto.length; i++){
+      if (letrasvalidas.indexOf(texto.charAt(i),0)===-1){
+         return 1;
+      }
+   }
+   return 0;
+}
